@@ -8,4 +8,8 @@ export class Capitaine extends Fighter {
   pied(): number {
     return 1;
   }
+
+  getAttacksList() {
+    return super.getAttacksList().map((func) => func.bind(this));
+  }
 }

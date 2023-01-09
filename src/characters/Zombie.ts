@@ -26,4 +26,11 @@ export class Zombie extends Fighter {
       return super.pied();
     }
   }
+
+  protected getAttacksList() {
+    const list = this.sortUsed
+      ? super.getAttacksList()
+      : super.getAttacksList().concat(this.sort);
+    return list.map((func) => func.bind(this));
+  }
 }
