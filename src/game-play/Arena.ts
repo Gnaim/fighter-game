@@ -5,6 +5,10 @@ import { Capitaine } from "../characters/Capitaine";
 import { shuffleArray } from "../helper/arrayFunctions";
 import { Fight } from "./Fight";
 
+export type fightPair = {
+  fighter1: Fighter;
+  fighter2: Fighter;
+};
 export class Arena {
   fightersLife = 10;
   fighters: Fighter[] = [];
@@ -20,6 +24,7 @@ export class Arena {
 
   getRandomFightsPair() {
     const fightersShuffled = shuffleArray(this.fighters);
+
     let pairs: fightPair[] = [];
 
     for (var i = 0; i < fightersShuffled.length - 1; i++) {
@@ -39,8 +44,3 @@ export class Arena {
     });
   }
 }
-
-export type fightPair = {
-  fighter1: Fighter;
-  fighter2: Fighter;
-};

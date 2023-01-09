@@ -2,7 +2,7 @@ export function getRandomElement<T>(array: Array<T>): T {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-export function shuffleArray<T>(array: T[]): T[] {
+export function shuffleArray<T>(array: Array<T>): Array<T> {
   let currentIndex = array.length;
   let randomIndex;
 
