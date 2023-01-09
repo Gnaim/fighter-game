@@ -1,0 +1,24 @@
+{
+  "name": "fighter-game",
+  "version": "1.0.0",
+  "description": "Multiple types of fighters fight that fights in an arena",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gnaim/fighter-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gnaim/fighter-game/issues"
+  },
+  "homepage": "https://github.com/Gnaim/fighter-game#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}
