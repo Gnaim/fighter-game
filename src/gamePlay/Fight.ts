@@ -14,18 +14,20 @@ export class Fight {
   startFight() {
     console.log(
       "\n \n \n \n \n",
-      "start fight between",
+      "Start fight between",
       this.fighter1,
       "and ",
       this.fighter2
     );
 
     while (this.fighter1.getLife() > 0 && this.fighter2.getLife() > 0) {
+      process.stdout.write("Fighter 1: ");
       this.fighter2.receiveAttaque(this.fighter1.randomAttack());
 
       // stop fight if fighter2 is dead
       if (this.fighter2.getLife() < 1) break;
 
+      process.stdout.write("Fighter 2: ");
       this.fighter1.receiveAttaque(this.fighter2.randomAttack());
     }
 

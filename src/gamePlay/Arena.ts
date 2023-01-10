@@ -4,13 +4,15 @@ import { Ninja } from "../characters/Ninja";
 import { Capitaine } from "../characters/Capitaine";
 import { shuffleArray } from "../helper/arrayFunctions";
 import { Fight } from "./Fight";
+import { GameConfig } from "../gameConfig/gameConfig";
+const gameConfig: GameConfig = require("../gameConfig/gameConfig.json");
 
 export type fightPair = {
   fighter1: Fighter;
   fighter2: Fighter;
 };
 export class Arena {
-  fightersLife = 10;
+  fightersLife = gameConfig.fight.fighterLife;
   fighters: Fighter[] = [];
   fightPairs: fightPair[] = [];
   initFighters() {

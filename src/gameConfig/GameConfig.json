@@ -1,0 +1,23 @@
+{
+  "fight": {
+    "fighterLife": 10
+  },
+  "character": {
+    "fighter": {
+      "attack": {
+        "pied": 2,
+        "poing": 1
+      }
+    },
+    "ninja": {
+      "attack": {
+        "coupDeKatana": 5
+      }
+    },
+    "capitaine": {
+      "attack": {
+        "pied": 1
+      }
+    }
+  }
+}

@@ -1,4 +1,7 @@
+import { GameConfig } from "../gameConfig/gameConfig";
 import { Fighter } from "./Fighter";
+const gameConfig: GameConfig = require("../gameConfig/gameConfig.json");
+
 export class Capitaine extends Fighter {
   receiveAttaque(attackDammage: number): number {
     const attackReduced = attackDammage > 0 ? attackDammage - 1 : 0;
@@ -6,7 +9,7 @@ export class Capitaine extends Fighter {
   }
 
   pied(): number {
-    return 1;
+    return gameConfig.character.capitaine.attack.pied;
   }
 
   getAttacksList() {

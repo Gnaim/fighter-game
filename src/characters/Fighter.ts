@@ -1,4 +1,6 @@
+import { GameConfig } from "../gameConfig/gameConfig";
 import { getRandomElement } from "../helper/arrayFunctions";
+const gameConfig: GameConfig = require("../gameConfig/gameConfig.json");
 export class Fighter {
   private life: number;
 
@@ -20,11 +22,11 @@ export class Fighter {
   }
 
   protected poing(): number {
-    return 1;
+    return gameConfig.character.fighter.attack.poing;
   }
 
   protected pied(): number {
-    return 2;
+    return gameConfig.character.fighter.attack.pied;
   }
 
   protected getAttacksList() {
@@ -35,7 +37,7 @@ export class Fighter {
     const randomAttackSelected = getRandomElement(this.getAttacksList());
     console.log(
       "Attack with",
-      randomAttackSelected.name,
+      randomAttackSelected.name.split(" ").pop(),
       randomAttackSelected()
     );
     return randomAttackSelected();

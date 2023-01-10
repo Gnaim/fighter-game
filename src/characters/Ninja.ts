@@ -1,7 +1,10 @@
+import { GameConfig } from "../gameConfig/gameConfig";
 import { Fighter } from "./Fighter";
+const gameConfig: GameConfig = require("../gameConfig/gameConfig.json");
+
 export class Ninja extends Fighter {
   coupDeKatana(): number {
-    return 5;
+    return gameConfig.character.ninja.attack.coupDeKatana;
   }
 
   getAttacksList() {
